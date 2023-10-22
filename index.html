@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Title: add your Portfolio websites's title here -->
+    <title>Haider Ali | Full Stack Developer</title>
+
+    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
+    <meta name="keywords" content="[haider ali], [haider], Laravel, PHP, javascript ,react js, vuejs" />
+
+    <!-- Improve your SEO by adding a small descrption of you -->
+    <meta name="description" content="Haider Ali | Full Stack Developer" />
+
+    <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
+    <link rel="icon" type="image/png" href="assets/devfolio-logo.png" />
+
+    <!-- Add your primary-theme color for the value of content -->
+    <meta name="theme-color" content="#36d1dc" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <!-- Fill content with the URL of this portfolio you'll host -->
+    <meta property="og:url" content="https://devfolio.js.org/" />
+    <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
+    <meta property="og:title" content="Haider Ali | Full Stack Developer" />
+    <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
+    <meta property="og:description" content="Made using Skills" />
+    <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
+      so that a thumbnail image of your portfolio is shown while shared on other platform -->
+    <meta
+      property="og:image"
+      content="https://devfolio.js.org/assets/devfolio.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <!-- Again fill content attr with the URL of this portfolio you'll host -->
+    <meta property="twitter:url" content="https://devfolio.js.org" />
+    <!-- Recommended to use the same text used within <title> element -->
+    <meta property="twitter:title" content="Haider Ali | Full Stack Developer" />
+    <!-- short description that shows up while your portfolio is shared -->
+    <meta
+      property="twitter:description"
+      content="Made using Skills"
+    />
+    <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
+    <meta
+      property="twitter:image"
+      content="https://anilseervi.vercel.app/assets/devfolio.png"
+    />
+
+    <!-- link tags -->
+    <link rel="preload" as="style" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- FontAwesome Icons link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="./javascript/scrollreveal.min.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="./javascript/scrollveal.js"
+    ></script>
+
+    <!-- Remove Google Analytics once you have your portfolio website set-up -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "UA-122228201-4")
+    </script>
+    <!-- End of Google Analytics -->
+  </head>
+  <style>
+    #hero {
+      background-image: url('assets/back22.jpg');
+      height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+    }
+    .hero-title{
+     color:  #fff;
+    }
+    .name 
+    {
+      color: #fff !important;
+    }
+    .img-fluid 
+    {
+      border-radius: 50%;
+    }
+    #skills 
+    {
+      background-color:black;background-image:linear-gradient(135deg, black 0%, black 100%);color:#fff;
+    color: #272341;
+    margin-top: -15rem;
+    padding-top: 15rem;
+
+    }
+    .title 
+    {
+      white-space: pre-wrap;
+      color: #fff;
+      margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 20px;
+    }
+  
+    .heading-title
+    {
+      font-size: 22px;
+      color: #fff;  
+    }
+    .about-wrapper__image p 
+    {
+      color: #fff;
+    }
+  </style>
+  <body>
+    <!-- Hero Section -->
+    <div id="hero">
+      <section class="container">
+        <h1 class="hero-title">
+          Hi, my name is <span class="text-color-main name">Haider Ali</span>
+          <br />
+          I'm the Full stack Developer.
+        </h1>
+        <p class="hero-cta">
+          <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
+        </p>
+      </section>
+      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
+        <div class="scroll-down"></div
+      ></a>
+    </div>
+    <!-- /END Hero Section -->
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row about-wrapper">
+          <div class="about-wrapper__image">
+            <img
+              class="img-fluid"
+              src="./assets/profile.jpeg"
+              alt="Profile Image"
+              width="450"
+              height="370"
+            />
+          </div>
+          <div class="about-wrapper__info">
+            <p class="about-wrapper__info-text">
+              Greetings! I'm a highly skilled Full Stack Developer with a passion for crafting dynamic and efficient web applications. With a solid foundation in PHP and Laravel, complemented by expertise in React and Vue.js, I bring a holistic approach to every project. My goal is to deliver seamless user experiences and robust backend systems that empower businesses to thrive in the digital realm.
+
+
+            </p>
+      <p>Basically I like to code to develop some nice and cool looking responsive Websites.
+</p>
+<p>
+        Feel free to reach out to me through any platform.</p>
+            <span class="about-wrapper__cta">
+              <a href="https://drive.google.com/file/d/17QXFePt5duce4le_Wxwjdmj30rzz3dbf/view" target="_blank" class="cta-btn cta-btn--resume">View Resume</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /END About Section -->
+    <section id="skills">
+        <div class="skills-wrapper">
+        <h2 class="section-title" style="color: #fff;">Skills</h2>
+        <article >
+          <main class="main"><div class="react-reveal section-content-container" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-573742671275129-1;"><div class="container"><h4 class="title" style="white-space: pre-wrap;"><p class="heading-title about-wrapper__info" style="visibility: visible;">I love to learn new things and experiment with new technologies.
+            These are some of the major languages, technologies, tools and platforms I have worked with:</p></h4><div><br><h3 class="title">Languages &amp; Databases</h3><div class="about-wrapper__image" style="display: inline-block;"><img src="assets/new-html.png" alt="htmk" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>HTML</p></div>
+            <div class="about-wrapper__image" style="display: inline-block;"><img src="assets/css.png" alt="css" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>CSS</p></div><div class="about-wrapper__image" style="display: inline-block;"><img src="assets/js.png" alt="js" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>JS</p></div><div class="about-wrapper__image" style="display: inline-block;"><img src="assets/php1.png" alt="PHP" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>PHP</p></div>
+            <div class="about-wrapper__image" style="display: inline-block;"><img src="assets/sql.png" alt="sql" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>SQL</p></div>
+            <div class="about-wrapper__image" style="display: inline-block;"><img src="assets/mysql.png" alt="MySQL" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>MySQL</p></div></div>
+            <div><br><h3 class="title">Frameworks &amp; Technologies</h3><div class="about-wrapper__image" style="display: inline-block;"><img src="assets/laravel.png" alt="Laravel" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>Laravel</p></div><div class="about-wrapper__image" style="display: inline-block;"><img src="assets/react.png" alt="React" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>React</p></div><div class="about-wrapper__image" style="display: inline-block;"><img src="assets/vue.png" alt="vuejs" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>vuejs</p></div></div>
+            <div><br><h3 class="title">Tools &amp; Platforms</h3><div class="about-wrapper__image" style="display: inline-block;"><img src="assets/jira.webp" alt="jira" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>Jira</p></div><div class="about-wrapper__image" style="display: inline-block;"><img src="assets/git.png" alt="Git" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>Git</p></div><div class="about-wrapper__image" style="display: inline-block;"><img src="assets/clickup.png" alt="clickup" style="height: 75px; width: 75px; margin: 10px 10px 0px;"><p>ClickUp</p></div></div></div></div></main>
+        </article>
+      </div>
+      
+    </section>
+    <!--Projects Section-->
+    <section id="projects" style="margin-top: 0px;">
+      <div class="container">
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Projects</h2>
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">The Staffer</h3>
+              <p class="project-wrapper__text-info">
+                TheStaffer is an industry leading fully customizable cloud-based software for Staffing Businesses. TheStaffer is one of the very few fully integrated software solution that allows Staffing Businesses to automate all their major workflows, ranging from hiring, interview scheduling, shortlisting, onboarding, scheduling, billing & invoicing and various other back office operations.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="https://www.thestaffer.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >See Live</a
+                >
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="assets/project1.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">LinenTech</h3>
+              <p class="project-wrapper__text-info">
+                LinenTech is a renowned software solution provider, earning the trust of over 200 commercial and industrial laundries worldwide. Specializing in delivering innovative, efficient, and custom-tailored solutions, we streamline operations, enhance productivity, and propel businesses to new heights of success..
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="https://www.linentech.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >See Live</a
+                >
+      
+                >
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="assets/project2.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Royal Mover Sand Packers</h3>
+              <p class="project-wrapper__text-info">
+                Royalmoversandpackers is a professional moving and packing service dedicated to simplifying the relocation process. With a team of skilled movers and top-notch equipment, we handle the careful packing, secure transportation, and efficient unpacking of your belongings. Whether it's a residential move or a commercial relocation, trust us for a seamless and stress-free experience.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >See Live</a
+                >
+            
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/royal.PNG"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+        </div>
+      </div>
+    </section>
+    <!-- End Projects Section -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-wrapper">
+          <p class="contact-wrapper__text">Have something for me to build?</p>
+          <a href="mailto:ali88haider8875@gmail.com" class="cta-btn cta-btn--resume">Call to Action</a>
+        </div>
+      </div>
+    </section>
+    <!-- END Contact Section -->
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <a href="#hero" class="back-to-top" aria-label="go back to top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+
+          <a
+            href="https://www.linkedin.com/in/haider-zafar-b4872a1b8?utm_source=share&utm_campaign=share_via&utm_content=profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="linkedin"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/haider88ali"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="github"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <hr />
+        <p class="footer__text">
+          &copy; <span id="year"></span> - Template by
+          <a
+            href="https://github.com/haider88ali"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Haider Ali</a
+          >. <br />Made with &hearts;
+        </p>
+      </div>
+    </footer>
+    <!-- END Footer Section -->
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear()
+    </script>
+    <script src="./javascript/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="./javascript/valtilt.js"></script>
+  </body>
+</html>
