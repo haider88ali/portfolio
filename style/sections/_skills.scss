@@ -91,11 +91,17 @@
 
     &--integration {
       justify-content: center;
-      min-height: 90px;
+      min-height: 110px;
       padding: 2rem 1.4rem;
 
+      img {
+        width: 44px;
+        height: 44px;
+        filter: none;
+      }
+
       span {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-transform: none;
         letter-spacing: 0.02em;
       }
