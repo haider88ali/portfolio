@@ -1,15 +1,34 @@
-// COLORS
-$primary-color: #36d1dc;
-$secondary-color: #5b86e5;
-$font-family: "Montserrat", sans-serif;
+// COLORS — Cosmic Neon 3D Theme
+$primary-color: #ff2d95;
+$secondary-color: #00f0ff;
+$accent-color: #b44aff;
 
-$light-white: #e5e5e5;
-$white-color: #ffffff;
-$dark-grey: #333333;
+$bg-deep: #030308;
+$bg-main: #08081a;
+$bg-card: #0e0e24;
+$bg-elevated: #141432;
 
-$dark-blue-text: #272341; // For headings
+$light-white: #c8c8e0;
+$white-color: #f0f0ff;
+$dark-grey: #060612;
+$text-muted: #7a7a9a;
+
+$font-display: "Orbitron", sans-serif;
+$font-family: "Exo 2", "Montserrat", sans-serif;
+
+$dark-blue-text: #e8e8f8;
 
 // FONT SIZE
 $default-font-size: 1.6rem;
 $mid-font-size: 2.5rem;
-$big-font-size: 4rem;
+$big-font-size: 5rem;
+
+// 3D & EFFECTS
+$perspective: 1200px;
+$neon-pink: 0 0 20px rgba(255, 45, 149, 0.5), 0 0 60px rgba(255, 45, 149, 0.2);
+$neon-cyan: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 60px rgba(0, 240, 255, 0.2);
+$neon-purple: 0 0 20px rgba(180, 74, 255, 0.4);
+$shadow-3d: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(180, 74, 255, 0.08);
+$border-glow: 1px solid rgba(0, 240, 255, 0.2);
+$radius-lg: 14px;
+$radius-xl: 22px;

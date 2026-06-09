@@ -1,0 +1,126 @@
+#skills {
+  background: radial-gradient(ellipse at 50% 100%, rgba($accent-color, 0.08) 0%, transparent 50%),
+    $bg-deep;
+  padding: 10rem 0;
+  perspective: $perspective;
+
+  .skills-wrapper {
+    text-align: center;
+  }
+
+  .skills-intro {
+    font-size: 1.8rem;
+    color: $text-muted;
+    max-width: 600px;
+    margin: 0 auto 5rem;
+    line-height: 1.8;
+  }
+
+  .skills-3d-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 2rem;
+    transform-style: preserve-3d;
+
+    @include respond(phone) {
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 1.4rem;
+    }
+  }
+
+  .skill-cube {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 2.4rem 1.2rem;
+    background: $bg-card;
+    border: $border-glow;
+    border-radius: $radius-lg;
+    transform-style: preserve-3d;
+    transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.45s ease;
+    cursor: default;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba($secondary-color, 0.08), rgba($primary-color, 0.08));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    &:hover {
+      transform: rotateY(12deg) rotateX(-8deg) translateZ(30px) scale(1.05);
+      box-shadow: $shadow-3d, $neon-cyan;
+      border-color: rgba($secondary-color, 0.5);
+
+      &::before {
+        opacity: 1;
+      }
+
+      img {
+        transform: translateZ(20px) scale(1.1);
+      }
+
+      span {
+        color: $secondary-color;
+        text-shadow: $neon-cyan;
+      }
+    }
+
+    img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      transition: transform 0.45s ease;
+      filter: drop-shadow(0 4px 12px rgba($secondary-color, 0.3));
+    }
+
+    span {
+      font-family: $font-display;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $text-muted;
+      transition: all 0.3s ease;
+    }
+
+    &--integration {
+      justify-content: center;
+      min-height: 90px;
+      padding: 2rem 1.4rem;
+
+      span {
+        font-size: 1.2rem;
+        text-transform: none;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+
+  .skills-category {
+    margin-bottom: 5rem;
+    text-align: left;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      font-family: $font-display;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: $accent-color;
+      margin-bottom: 2.4rem;
+      text-shadow: $neon-purple;
+      padding-left: 1rem;
+      border-left: 3px solid $accent-color;
+    }
+  }
+}

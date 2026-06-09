@@ -1,8 +1,10 @@
-let tilt = document.querySelectorAll(".rounded");
-VanillaTilt.init(tilt, {
-  max: 3,
-  speed: 500,
-  scale: 1.05,
-  glare: true,
-  "max-glare": 0.3,
-});
+if (typeof VanillaTilt !== "undefined") {
+  VanillaTilt.init(document.querySelectorAll(".js-tilt"), {
+    max: 15,
+    speed: 400,
+    scale: 1.03,
+    glare: true,
+    "max-glare": 0.25,
+    perspective: 1200,
+  })
+}

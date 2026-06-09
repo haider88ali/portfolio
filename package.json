@@ -1,0 +1,12 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "description": "Haider Ali — static portfolio site",
+  "scripts": {
+    "build": "sass style/main.scss css/main.css --no-source-map --style=compressed",
+    "watch": "sass style/main.scss css/main.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

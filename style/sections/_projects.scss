@@ -1,82 +1,119 @@
 #projects {
-  background-color: $light-white;
-  color: $dark-blue-text;
-  margin-top: -15rem;
-  padding-top: 15rem;
-  @include respond(tab-land) {
-    margin-top: 0;
-    padding-top: 5rem;
-  }
-  @include respond(phone) {
-    padding-bottom: 1px;
-  }
+  background: $bg-main;
+  padding: 10rem 0;
+  perspective: $perspective;
+
   .project-wrapper {
-    margin-bottom: 15rem;
-    @include respond(phone) {
-      margin-bottom: 0rem;
+    text-align: left;
+
+    .section-header {
+      text-align: center;
     }
-    .row {
-      margin: 0;
-      margin-bottom: 8rem;
-      @include respond(phone) {
-        margin-bottom: 4rem;
-      }
+
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
     }
-    &__text {
-      width: 100%;
-      text-align: left;
-      @include respond(tab-land) {
-        margin-bottom: 4.8rem;
+
+    .project-card-3d {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 3rem;
+      align-items: center;
+      padding: 3rem;
+      background: $bg-card;
+      border: $border-glow;
+      border-radius: $radius-xl;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba($accent-color, 0.1) 0%, transparent 70%);
+        pointer-events: none;
       }
-      @include respond(phone) {
-        margin-bottom: 2.5rem;
+
+      &:hover {
+        box-shadow: $shadow-3d;
+        border-color: rgba($primary-color, 0.3);
       }
-      &-title {
-        font-weight: bold;
-        margin-bottom: 1.8rem;
-        font-size: $mid-font-size;
+
+      &:nth-child(even) {
+        grid-template-columns: 1.1fr 1fr;
+
+        .project-card-3d__info {
+          order: 2;
+        }
+
+        .project-card-3d__visual {
+          order: 1;
+        }
+      }
+
+      @include respond(tab-port) {
+        grid-template-columns: 1fr !important;
+        padding: 2rem;
+
+        .project-card-3d__info,
+        .project-card-3d__visual {
+          order: unset !important;
+        }
+      }
+
+      &__num {
+        font-family: $font-display;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        color: $primary-color;
+        text-shadow: $neon-pink;
+        margin-bottom: 1rem;
+      }
+
+      &__title {
+        font-family: $font-display;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $white-color;
+        margin-bottom: 1.2rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
 
         @include respond(phone) {
           font-size: 2rem;
         }
       }
 
-      &-info {
-        margin-bottom: 1.5rem;
+      &__desc {
+        font-size: 1.6rem;
+        color: $text-muted;
+        line-height: 1.85;
+        margin-bottom: 2rem;
       }
 
-      &-btns {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
+      &__visual {
+        transform-style: preserve-3d;
       }
-    }
 
-    &__image {
-      width: 90%;
-      margin: 0 auto;
-
-      @include respond(tab-land) {
-        width: 100%;
-        margin: 0;
-      }
-      & .thumbnail {
-        border: none;
-        box-shadow: 8px 8px 9px 7px rgba(174, 174, 192, 0.4),
-          -5px -5px 15px 7px #ffffff;
+      .thumbnail {
+        border-radius: $radius-lg;
+        overflow: hidden;
+        border: 1px solid rgba($secondary-color, 0.2);
+        box-shadow: $shadow-3d;
+        transform-style: preserve-3d;
 
         .img-fluid {
           width: 100%;
-          height: auto;
-          vertical-align: middle;
-          border-radius: 2px;
-        }
-        @include respond(phone) {
-          box-shadow: none;
-          border: 1px solid #d2d2d2;
-          margin-bottom: 3.2rem;
-          transform: none;
+          border-radius: $radius-lg;
+          display: block;
         }
       }
     }

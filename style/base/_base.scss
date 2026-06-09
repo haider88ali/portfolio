@@ -2,13 +2,65 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: $font-family;
 }
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
 body {
+  font-family: $font-family;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.6;
+  background-color: $bg-deep;
+  color: $dark-blue-text;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba($primary-color, 0.35);
+  color: $white-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Global 3D scene wrapper
+.scene-3d {
+  perspective: $perspective;
+  transform-style: preserve-3d;
+}
+
+// VanillaTilt glare overlay blocks clicks on nested links without this
+.js-tilt-glare-wrapper,
+.js-tilt-glare {
+  pointer-events: none !important;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+
+  &__layer {
+    transform-style: preserve-3d;
+  }
+
+  &__glow {
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, $primary-color, $secondary-color, $accent-color);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    filter: blur(12px);
+  }
+
+  &:hover .card-3d__glow {
+    opacity: 0.5;
+  }
 }

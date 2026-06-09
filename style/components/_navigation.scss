@@ -1,0 +1,85 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.6rem 0;
+  transition: all 0.35s ease;
+
+  &--scrolled {
+    background: rgba($bg-deep, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: $border-glow;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    padding: 1rem 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+
+  &__logo {
+    font-family: $font-display;
+    font-size: 2rem;
+    font-weight: 900;
+    color: $secondary-color;
+    text-shadow: $neon-cyan;
+    letter-spacing: 0.1em;
+  }
+
+  &__links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    a {
+      font-family: $font-display;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: $text-muted;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $primary-color;
+        text-shadow: $neon-pink;
+      }
+    }
+  }
+
+  &__cta {
+    font-family: $font-display;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1rem 2.4rem;
+    border-radius: 4px;
+    color: $bg-deep;
+    background: linear-gradient(135deg, $secondary-color, $accent-color);
+    box-shadow: $neon-cyan;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: $neon-cyan, $neon-purple;
+    }
+
+    @include respond(tab-port) {
+      padding: 0.8rem 1.6rem;
+      font-size: 1.1rem;
+    }
+  }
+}
